@@ -1,18 +1,4 @@
 {{--
-|--------------------------------------------------------------------------
-| Master Frontend Template
-|--------------------------------------------------------------------------
-|
-| Master Template from PHP/Laravel Module "FrontendXXX".
-| This is the Master-Template where all Frontend-apps have to use it.
-| Don't change it, until you know what you do!
-|
-| @author:  YezzDesign
-| @mail:    yezz.design@schodie.de
-|
-| -------------------------------------------------- --}}
-
-{{--
 | --------------------------------------------------
 | HTML5 Doctype
 | -------------------------------------------------- --}}
@@ -36,7 +22,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport"    content="{{ $metaViewport ?? 'width=device-width, initial-scale=1' }}">
         <meta name="keywords"    content="{{ $metaKeywords ?? '' }}">
-        <meta name="author"      content="{{ $metaAuthor ?? config('acp.website_author') }}">
+        <meta name="author"      content="{{ $metaAuthor ?? config('app.author') }}">
         <meta name="description" content="{{ $metaDescription ?? '' }}">
 
     {{--| --------------------------------------------------
@@ -47,7 +33,7 @@
     {{--| --------------------------------------------------
         | Title of Website | Schema "Site|Module|AppName"
         | -------------------------------------------------- --}}
-        <title>{{ $title ?? 'Home' }} - {{ config('acp.website_name') }}</title>
+        <title>{{ $title ?? 'Home' }} - {{ config('app.frontend.name') ?? config('app.name') }}</title>
 
     {{--| --------------------------------------------------
         | Fonts

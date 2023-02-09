@@ -3,9 +3,9 @@
     title="{{ $cardTitle }}">
 
     <x-slot:smalltitle>
-        <span class="hover:text-prime_brand">{{ $cardAuthorName ?? 'Author' }}</span> - {{ \Carbon\Carbon::parse( $cardAuthorDate ?? now() )->locale(config('app.locale'))->translatedFormat('d F Y') }}
+        <span class="hover:text-prime_brand break-all">{{ $cardAuthorName ?? 'Author' }}</span> - {{ \Carbon\Carbon::parse( $cardAuthorDate ?? now() )->locale(config('app.locale'))->translatedFormat('d F Y') }}
     </x-slot:smalltitle>
-    <x-themes::text.item class="text-2xl">
+    <x-themes::text.item class="text-2xl break-all">
         {{ $cardContent ?? 'Content' }}
     </x-themes::text.item>
     <x-themes::text.item class="text-2xl">

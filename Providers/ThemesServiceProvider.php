@@ -4,6 +4,7 @@ namespace Modules\Themes\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\Themes\Services\BreadcrumbService;
 
 class ThemesServiceProvider extends ServiceProvider
 {
@@ -38,6 +39,8 @@ class ThemesServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(RouteServiceProvider::class);
+
+        $this->app->singleton('Breadcrumb', BreadcrumbService::class);
     }
 
     /**

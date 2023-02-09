@@ -1,3 +1,3 @@
-<p class="{{ $class ?? '' }}">
+<p {{ $attributes }}">
     {{ $slot }}
 </p>
