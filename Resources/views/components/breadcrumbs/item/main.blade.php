@@ -1,1 +1,1 @@
-<x-themes::breadcrumbs.item item-class="font-bold {{ $itemClass ?? '' }}" href="{{ $route ?? '#' }}" name="{{ $name }}" />
+<x-themes::breadcrumbs.item item-class="font-bold {{ $itemClass ?? '' }}" route="{{ $route }}" name="{{ $name }}" />

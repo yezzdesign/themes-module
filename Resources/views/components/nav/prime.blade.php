@@ -5,7 +5,7 @@
         <x-themes::menu.hamburger />
     </x-themes::logo.navigation>
 
-    <div id="menu" class="w-full">
+    <div id="menu" class="w-full hidden md:block">
         <ul class="text-central_font text-2xl lg:text-4xl flex flex-col md:flex-row md:justify-between items-baseline">
             {{ $slot }}
         </ul>
