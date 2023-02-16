@@ -7,7 +7,7 @@
 {{--|---------------------------------------------------
     | Tailwind Design Classes for the first container
     |--------------------------------------------------- --}}
-    class="text-prime_font_color font-prime_font bg-prime_bg text-3xl {{ $class ?? '' }}">
+    class="text-prime_font_color font-prime_font bg-prime_bg text-lg md:text-3xl {{ $class ?? '' }}">
 
 {{--|---------------------------------------------------
     | CSS Styles

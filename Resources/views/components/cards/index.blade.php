@@ -5,12 +5,12 @@
             <div class="mt-40">
                 <div class="filter-none px-2 py-4 backdrop-blur-sm bg-prime_bg/70 hover:bg-prime_bg transition-all duration-1000">
                     <x-themes::div class="border-prime_font_border_color border-t pt-2">
-                        <x-themes::text.prime_small title="{{ $title }}">
+                        <x-themes::text.prime_small title="{!! $title !!}">
 
                         </x-themes::text.prime_small>
                     </x-themes::div>
 
-                    <div class="mt-1 font-medium text-sm text-gray-600">{{ $smalltitle ?? '' }}</div>
+                    <div class="mt-1 font-medium text-sm text-white">{{ $smalltitle ?? '' }}</div>
                     {{ $slot }}
                 </div>
             </div>

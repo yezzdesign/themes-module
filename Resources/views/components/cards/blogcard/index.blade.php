@@ -11,8 +11,8 @@
                 </p>
                 <x-themes::text.prime.easy
                     head-class="p-8 text-lg lg:text-2xl"
-                    title-class="break-all"
-                    content-class="break-all">
+                    title-class="text-justify word-break leading-relaxed"
+                    content-class="text-justify word-break leading-relaxed">
                     <x-slot:titleContent>
                         <x-themes::a href="{{ $cardHref ?? '#' }}">
                             {{ $titleContent ?? '' }}

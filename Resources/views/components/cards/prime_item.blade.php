@@ -1,11 +1,14 @@
 <x-themes::cards
-    src="{{ $cardImage }}"
-    title="{{ $cardTitle }}">
+    src="{{ $cardImage }}">
+
+    <x-slot:title>
+        <x-themes::a href="{{ $cardHref ?? '#' }}">{{ $cardTitle }}</x-themes::a>
+    </x-slot:title>
 
     <x-slot:smalltitle>
-        <span class="hover:text-prime_brand break-all">{{ $cardAuthorName ?? 'Author' }}</span> - {{ \Carbon\Carbon::parse( $cardAuthorDate ?? now() )->locale(config('app.locale'))->translatedFormat('d F Y') }}
+        <span class="hover:text-prime_brand text-justify word-break leading-relaxed">{{ $cardAuthorName ?? 'Author' }}</span> - {{ \Carbon\Carbon::parse( $cardAuthorDate ?? now() )->locale(config('app.locale'))->translatedFormat('d F Y') }}
     </x-slot:smalltitle>
-    <x-themes::text.item class="text-2xl break-all">
+    <x-themes::text.item class="text-2xl text-justify word-break leading-relaxed">
         {{ $cardContent ?? 'Content' }}
     </x-themes::text.item>
     <x-themes::text.item class="text-2xl">
